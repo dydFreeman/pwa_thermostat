@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { TemperatureService } from './services/temperature.service';
 
 @Component({
@@ -13,6 +13,6 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.temperatureService.getTemperatures().subscribe((data) => {
       console.log(data);
-    })
+    });
   }
 }
